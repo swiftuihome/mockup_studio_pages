@@ -2,7 +2,7 @@
   "title": "Mockup Studio",
   "subtitle": "基于 SwiftUI 构建的专业演示应用",
   "description": "Mockup Studio 是一款专业的可视化 App Store 截图制作工具。采用高效的“双面板”工作流：左侧掌控全局设计语言，右侧精修单页细节。内置强大的阴影编辑器和背景纹理生成器，支持 iPhone 17 Pro Max 等最新机型，助您以像素级的精度打磨每一张营销图。",
-  "cover": "images/studio_cover.png",
+  "cover": "images/app_logo.jpg",
   "download": {
     "link": "https://pan.baidu.com/s/1JCmfwdnl3HUWAnSRZy1AUw?pwd=cjki"
   },
