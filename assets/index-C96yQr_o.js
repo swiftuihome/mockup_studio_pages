@@ -8,7 +8,7 @@
             <div class="relative">
               <div class="h-72 bg-gray-900 relative overflow-hidden group">
                   <div class="absolute inset-0 transform -skew-y-3 scale-110 origin-bottom-left">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('/mockup_studio_pages/images/MockupStudio.png');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('/mockup_studio_pages/images/MockupStudio.jpg');"></div>
                     <div class="absolute inset-0 bg-gradient-to-br from-orange-900/80 via-amber-900/60 to-red-900/40 mix-blend-overlay"></div>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
