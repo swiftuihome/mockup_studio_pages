@@ -1,14 +1,14 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))s(t);new MutationObserver(t=>{for(const r of t)if(r.type==="childList")for(const a of r.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&s(a)}).observe(document,{childList:!0,subtree:!0});function e(t){const r={};return t.integrity&&(r.integrity=t.integrity),t.referrerPolicy&&(r.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?r.credentials="include":t.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function s(t){if(t.ep)return;t.ep=!0;const r=e(t);fetch(t.href,r)}})();document.addEventListener("DOMContentLoaded",async()=>{const o=document.getElementById("app-container");try{const e=await fetch("/data/app_data.json");if(!e.ok)throw new Error("Network response was not ok");const s=await e.json();i(s)}catch(e){console.error("Error fetching data:",e),o.innerHTML=`
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))s(t);new MutationObserver(t=>{for(const r of t)if(r.type==="childList")for(const a of r.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&s(a)}).observe(document,{childList:!0,subtree:!0});function e(t){const r={};return t.integrity&&(r.integrity=t.integrity),t.referrerPolicy&&(r.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?r.credentials="include":t.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function s(t){if(t.ep)return;t.ep=!0;const r=e(t);fetch(t.href,r)}})();document.addEventListener("DOMContentLoaded",async()=>{const o=document.getElementById("app-container");try{const e=await fetch("/mockup_studio_pages/data/app_data.json");if(!e.ok)throw new Error("Network response was not ok");const s=await e.json();i(s)}catch(e){console.error("Error fetching data:",e),o.innerHTML=`
           <div class="p-8 text-center">
               <p class="text-red-500 font-medium">加载数据失败</p>
               <p class="text-sm text-gray-500 mt-2">请确保您是通过本地服务器(如Live Server)运行此页面的。</p>
               <p class="text-xs text-gray-400 mt-1">${e.message}</p>
           </div>
-      `,o.classList.remove("opacity-0")}function i(e){const s=e.cover.startsWith("/")?e.cover:"/"+e.cover;o.innerHTML=`
+      `,o.classList.remove("opacity-0")}function i(e){const s="/mockup_studio_pages/"+(e.cover.startsWith("/")?e.cover.slice(1):e.cover);o.innerHTML=`
             <div class="relative">
               <div class="h-72 bg-gray-900 relative overflow-hidden group">
                   <div class="absolute inset-0 transform -skew-y-3 scale-110 origin-bottom-left">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('/images/MockupStudio.png');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('/mockup_studio_pages/images/MockupStudio.png');"></div>
                     <div class="absolute inset-0 bg-gradient-to-br from-orange-900/80 via-amber-900/60 to-red-900/40 mix-blend-overlay"></div>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
