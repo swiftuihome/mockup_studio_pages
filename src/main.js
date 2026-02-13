@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         // In Vite, assets in public/ are served from root
-        const response = await fetch('/data/app_data.json');
+        const response = await fetch(import.meta.env.BASE_URL + 'data/app_data.json');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function renderApp(data) {
         // images in public/ are referenced from root context
-        const coverPath = data.cover.startsWith('/') ? data.cover : '/' + data.cover;
+        const coverPath = import.meta.env.BASE_URL + (data.cover.startsWith('/') ? data.cover.slice(1) : data.cover);
 
         container.innerHTML = `
             <div class="relative">
               <div class="h-72 bg-gray-900 relative overflow-hidden group">
                   <div class="absolute inset-0 transform -skew-y-3 scale-110 origin-bottom-left">
-                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('/images/MockupStudio.png');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105" style="background-image: url('${import.meta.env.BASE_URL}images/MockupStudio.png');"></div>
                     <div class="absolute inset-0 bg-gradient-to-br from-orange-900/80 via-amber-900/60 to-red-900/40 mix-blend-overlay"></div>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
