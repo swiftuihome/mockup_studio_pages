@@ -5,5 +5,5 @@ export default defineConfig({
     plugins: [
         tailwindcss(),
     ],
-    base: '/mockup_studio_page/',
+    base: '/mockup_studio_pages/',
 })
